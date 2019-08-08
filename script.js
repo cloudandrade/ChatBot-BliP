@@ -19,3 +19,16 @@ match.forEach(element => {
     console.log("não achou");
   }
 });
+
+console.log("######################################################");
+//função para pausar o sistema em determinados segundos
+//aqui estou chamando essa função e passando 10 segundos como tempo para a pausa
+sleep(10);
+
+async function sleep(seconds) {
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  // Sleep in loop
+  for (let i = 1; i <= seconds; i++) {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+}
